@@ -117,14 +117,14 @@ print("=" * 70)
 print("\n[1/10] Loading BWF World Tour dataset …")
 
 # ── Option B: Download directly from Kaggle ───────────────────────────────────
-# try:
-#     import kagglehub
-#     kpath = kagglehub.dataset_download("sanderp/badminton-bwf-world-tour")
-#     import glob
-#     csv_files = glob.glob(os.path.join(kpath, "*.csv"))
-#     DATA_PATH = csv_files[0]
-#     print(f"  Downloaded to: {DATA_PATH}")
-# except Exception as e:
+ try:
+     import kagglehub
+    kpath = kagglehub.dataset_download("sanderp/badminton-bwf-world-tour")
+   import glob
+   csv_files = glob.glob(os.path.join(kpath, "*.csv"))
+   DATA_PATH = csv_files[0]
+   print(f"  Downloaded to: {DATA_PATH}")
+#except Exception as e:
 #     print(f"  Kaggle download failed ({e}), falling back to local ms.csv")
 #     DATA_PATH = 'ms.csv'
 
